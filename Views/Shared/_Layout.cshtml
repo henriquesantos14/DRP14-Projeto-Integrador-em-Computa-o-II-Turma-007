@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ateliê da Beleza</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PaulaPachecoHairStyle.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-logo" asp-controller="Home" asp-action="Index">
+                    <div class="logo-text">Paula Pacheco</div>
+                    <div class="logo-subtitle">Ateliê da beleza</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Procedures" asp-action="List">Procedimentos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container py-3">
+            <!-- Reduzido padding vertical -->
+            <div class="row justify-content-center align-items-center">
+                <!-- Endereço e Contato -->
+                <div class="col-md-4 text-end pe-4">
+                    <!-- Padding direita -->
+                    <h6 class="text-dark mb-2">Endereço e Contato</h6>
+                    <div class="contact-info">
+                        <p class="text-dark mb-1"><small>Rua Lagoa da Prata 78 - V. Cisper</small></p>
+                        <p class="text-dark mb-1"><small>04516-00 - São Paulo - SP</small></p>
+                        <p class="text-dark mb-1"><small>Telefone: (011) 5051-0053</small></p>
+                        <p class="text-dark mb-0"><small>Email: contato@paulapacheco.com</small></p>
+                    </div>
+                </div>
+
+                <!-- Linha vertical divisória -->
+                <div class="col-auto px-0">
+                    <div class="vr h-100" style="background-color: #333;"></div>
+                </div>
+
+                <!-- Redes Sociais -->
+                <div class="col-md-4 text-start ps-4">
+                    <!-- Padding esquerda -->
+                    <h6 class="text-dark mb-2">Redes sociais</h6>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-2">
+                <div class="col-12 text-center">
+                    <small class="text-dark">&copy; 2024 - PaulaPachecoHairStyle</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <a href="https://wa.me/5511SEUNUMERO" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
